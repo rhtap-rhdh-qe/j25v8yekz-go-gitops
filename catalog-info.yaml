@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: j25v8yekz-go-gitops
+  description: This is GitOps manifest for j25v8yekz-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=j25v8yekz-go
+    backstage.io/kubernetes-id: j25v8yekz-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: j25v8yekz-go
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:j25v8yekz-go
